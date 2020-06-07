@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		217CEFDE248C3113002A4D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217CEFDC248C3113002A4D0D /* LaunchScreen.storyboard */; };
 		217CEFE9248C3113002A4D0D /* plotlyiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CEFE8248C3113002A4D0D /* plotlyiosTests.swift */; };
 		217CEFF4248C3113002A4D0D /* plotlyiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217CEFF3248C3113002A4D0D /* plotlyiosUITests.swift */; };
+		217CF006248C33C0002A4D0D /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 217CF005248C33C0002A4D0D /* CSV */; };
+		217CF2AB248C36C7002A4D0D /* Plotly in Frameworks */ = {isa = PBXBuildFile; productRef = 217CF2AA248C36C7002A4D0D /* Plotly */; };
+		217CF2AE248C39C4002A4D0D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217CF2AD248C39C4002A4D0D /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		217CEFEF248C3113002A4D0D /* plotlyiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plotlyiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		217CEFF3248C3113002A4D0D /* plotlyiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plotlyiosUITests.swift; sourceTree = "<group>"; };
 		217CEFF5248C3113002A4D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		217CF2AD248C39C4002A4D0D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217CF2AE248C39C4002A4D0D /* WebKit.framework in Frameworks */,
+				217CF2AB248C36C7002A4D0D /* Plotly in Frameworks */,
+				217CF006248C33C0002A4D0D /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				217CEFE7248C3113002A4D0D /* plotlyiosTests */,
 				217CEFF2248C3113002A4D0D /* plotlyiosUITests */,
 				217CEFCF248C3110002A4D0D /* Products */,
+				217CF2AC248C39C4002A4D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +136,14 @@
 			path = plotlyiosUITests;
 			sourceTree = "<group>";
 		};
+		217CF2AC248C39C4002A4D0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				217CF2AD248C39C4002A4D0D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +160,10 @@
 			dependencies = (
 			);
 			name = plotlyios;
+			packageProductDependencies = (
+				217CF005248C33C0002A4D0D /* CSV */,
+				217CF2AA248C36C7002A4D0D /* Plotly */,
+			);
 			productName = plotlyios;
 			productReference = 217CEFCE248C3110002A4D0D /* plotlyios.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +236,10 @@
 				Base,
 			);
 			mainGroup = 217CEFC5248C3110002A4D0D;
+			packageReferences = (
+				217CF004248C33C0002A4D0D /* XCRemoteSwiftPackageReference "CSV" */,
+				217CF2A9248C36C7002A4D0D /* XCRemoteSwiftPackageReference "Plotly" */,
+			);
 			productRefGroup = 217CEFCF248C3110002A4D0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -584,6 +608,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		217CF004248C33C0002A4D0D /* XCRemoteSwiftPackageReference "CSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+		217CF2A9248C36C7002A4D0D /* XCRemoteSwiftPackageReference "Plotly" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vojtamolda/Plotly.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		217CF005248C33C0002A4D0D /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 217CF004248C33C0002A4D0D /* XCRemoteSwiftPackageReference "CSV" */;
+			productName = CSV;
+		};
+		217CF2AA248C36C7002A4D0D /* Plotly */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 217CF2A9248C36C7002A4D0D /* XCRemoteSwiftPackageReference "Plotly" */;
+			productName = Plotly;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 217CEFC6248C3110002A4D0D /* Project object */;
 }
